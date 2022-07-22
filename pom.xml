@@ -4,7 +4,7 @@
 
 	<groupId>sam.springframework</groupId>
 	<artifactId>sam-pet-clinic</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<modules>
 		<module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
@@ -44,5 +44,6 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/sampathsuni/sam-pet-clinic.git</developerConnection>
-	</scm>
+	  <tag>sam-pet-clinic-0.0.3</tag>
+  </scm>
 	</project>
