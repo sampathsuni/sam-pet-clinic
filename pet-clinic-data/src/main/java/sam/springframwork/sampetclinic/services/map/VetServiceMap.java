@@ -1,19 +1,22 @@
 package sam.springframwork.sampetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import sam.springframwork.sampetclinic.model.Vet;
-import sam.springframwork.sampetclinic.services.CrudService;
+import sam.springframwork.sampetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet,Long> {
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+
     @Override
     public Vet findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public Vet save(Long id, Vet object) {
-        return super.save(object.getId(), object);
+    public Vet save(Vet object) {
+        return super.save(object);
     }
 
     @Override

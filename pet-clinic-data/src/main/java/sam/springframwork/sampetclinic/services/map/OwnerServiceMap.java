@@ -1,11 +1,12 @@
 package sam.springframwork.sampetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import sam.springframwork.sampetclinic.model.Owner;
-import sam.springframwork.sampetclinic.services.CrudService;
+import sam.springframwork.sampetclinic.services.OwnerService;
 
 import java.util.Set;
-
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner,Long> {
+@Service
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -19,19 +20,23 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public Owner save(Long id,Owner object){
-        return super.save(object.getId(),object);
+    public Owner save(Owner object){
+        return super.save(object);
     }
 
     @Override
     public void delete(Owner object) {
-        this.delete(object);
+        super.delete(object);
     }
 
     @Override
     public void deleteById(Long id) {
-        this.deleteById(id);
+        super.deleteById(id);
     }
 
 
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
 }

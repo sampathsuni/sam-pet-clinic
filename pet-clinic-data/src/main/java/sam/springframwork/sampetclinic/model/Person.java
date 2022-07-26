@@ -12,7 +12,7 @@ public class Person extends BaseEntity {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public String getLastName(String kumar) {
         return lastName;
     }
 
