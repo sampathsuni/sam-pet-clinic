@@ -6,8 +6,6 @@ import sam.springframwork.sampetclinic.model.Owner;
 import sam.springframwork.sampetclinic.model.Vet;
 import sam.springframwork.sampetclinic.services.OwnerService;
 import sam.springframwork.sampetclinic.services.VetService;
-import sam.springframwork.sampetclinic.services.map.OwnerServiceMap;
-import sam.springframwork.sampetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
