@@ -3,17 +3,17 @@ package sam.springframwork.sampetclinic.services.map;
 import org.springframework.stereotype.Service;
 import sam.springframwork.sampetclinic.model.Speciality;
 import sam.springframwork.sampetclinic.model.Vet;
-import sam.springframwork.sampetclinic.services.SpecialtyService;
+import sam.springframwork.sampetclinic.services.SpecialityService;
 import sam.springframwork.sampetclinic.services.VetService;
 
 import java.util.Set;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
-    private final SpecialtyService specialtyService;
+    private final SpecialityService specialtyService;
 
-    public VetServiceMap(SpecialtyService specialtyService) {
+    public VetMapService(SpecialityService specialtyService) {
         this.specialtyService = specialtyService;
     }
 

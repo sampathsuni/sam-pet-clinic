@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import sam.springframwork.sampetclinic.model.*;
 import sam.springframwork.sampetclinic.services.OwnerService;
 import sam.springframwork.sampetclinic.services.PetTypeService;
-import sam.springframwork.sampetclinic.services.SpecialtyService;
+import sam.springframwork.sampetclinic.services.SpecialityService;
 import sam.springframwork.sampetclinic.services.VetService;
 
 import java.time.LocalDate;
@@ -16,9 +16,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
-    private final SpecialtyService specialtyService;
+    private final SpecialityService specialtyService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialtyService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
